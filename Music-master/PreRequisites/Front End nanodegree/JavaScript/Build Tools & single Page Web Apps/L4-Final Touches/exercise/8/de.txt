@@ -1,0 +1,47 @@
+Exercise: Service Workers
+Now, you'll add service workers so your app can still appear if the server connection is momentarily severed.
+
+cd into webpack-sass to start.
+
+Install the workbox plugin
+HIDE SOLUTION
+npm install workbox-webpack-plugin
+
+Add a service worker script to index.html
+HIDE SOLUTION
+At the bottom of index.html (after the footer, but still in the body), add the following script:
+
+
+<script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+</script>
+Update webpack.prod.js to include the workbox plug-in
+HIDE SOLUTION
+At the top of the file, add:
+
+
+const WorkboxPlugin = require('workbox-webpack-plugin')
+Make sure module.exports includes:
+
+
+    output: {
+        libraryTarget: 'var',
+        library: 'Client'
+    },
+Then add the plugin near the bottom.
+
+
+new WorkboxPlugin.GenerateSW()
+Run your server (production version), refresh the page a few times
+Turn off the server in your terminal (use Control+C this time instead of "Close App" below, or else your app window will close).
+Go back to your web page and refresh
+You’ve been successful if you still see your webpage!
+Need to try viewing the app? Use these to view or stop the app.
+
+OPEN APP CLOSE APP

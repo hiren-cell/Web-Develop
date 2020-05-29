@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Exercise 1</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+
+    <style>
+        body {
+            background-color: #444;
+            color: #fffff8;
+            font-size: 27px;
+        }
+
+        .container {
+            display: grid;
+            width: 80vw;
+            grid-template-columns: 300px 300px 200px;
+            margin: auto;
+            gap: 15px;
+            border: 2px solid rgb(247, 182, 96);
+            justify-content: center;
+        }
+
+        .box {
+            width: 250px;
+            height: 150px;
+            border: 1px solid red;
+        }
+
+        #one {
+            grid-area: top;
+        }
+
+        #two {
+            grid-area: bottomLeft;
+        }
+
+        #three {
+            grid-area: bottomRight;
+        }
+        #
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"> Space 1</div>
+        <div class="box"> Space 2</div>
+        <div class="box"> Space 3</div>
+        <div class="box"> Space 4</div>
+        <div class="box"> Space 5</div>
+    </div>
+</body>
+
+</html>

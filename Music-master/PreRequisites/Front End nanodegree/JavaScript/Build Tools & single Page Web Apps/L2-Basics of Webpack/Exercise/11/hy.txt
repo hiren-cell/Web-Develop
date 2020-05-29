@@ -1,0 +1,28 @@
+Exercise: Loaders
+Now, you'll see how babel helps with linking, along with exports and imports. Start by cding into webpack-content.
+
+Make sure you have installed Babel according to the instructions in the last tasklist.
+Tell webpack to use our new babel loader; add this to the module.exports in webpack config:
+
+module: {
+    rules: [
+        {
+            test: '/\.js$/',
+            exclude: /node_modules/,
+            loader: "babel-loader"
+        }
+    ]
+}
+Add export statements to your javascript files
+HIDE SOLUTION
+export { functionName }
+
+Add import statements for your javascript files in the index.js
+HIDE SOLUTION
+import { functionName } from './js/fileName'
+
+Delete your dist folder. You can delete it through your text editor, but it’s good practice to try it in the command line. Run the following command from your project root:
+rm -rf dist
+
+Re-build webpack and watch the text that shows up in your terminal. You should see the names of your javascript files included in the files Webpack has looked through. You might not find your javascript code in the main.js, but as long as you can see that Webpack found your js files, it is all working as expected.
+Need to try viewing the app? Use these to view or stop the app.

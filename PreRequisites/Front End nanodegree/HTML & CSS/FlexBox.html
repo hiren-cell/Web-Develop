@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta
+        content="width=device-width,
+        initial-scale=1,
+        maximum-scale=1"
+        name="viewport"
+        />
+        <style>
+            .container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: baseline;
+                border: 2px solid yellow;
+            }
+            .box{
+                width: 250px;
+                height: 150px;
+                border: 1px solid red;
+            }
+            #one{
+                order: 1;
+                width: 250px;
+                height: 150px;
+                border: 1px solid red;
+            }
+            #two{
+                order: 2;
+            }
+            #three{
+                order: 3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box" id="one">Box 1</div>
+            <div class="box" id="two">Box 2</div>
+            <div class="box" id="three">Box 3</div>
+        </div>
+    </body>
+</html>

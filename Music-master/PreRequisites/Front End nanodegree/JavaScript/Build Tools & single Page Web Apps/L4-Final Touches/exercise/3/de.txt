@@ -1,0 +1,30 @@
+Exercise: Fixing Functionality
+Let's get your app working properly again! Start by cding into webpack-sass.
+
+Update the webpack config output to include libraryTarget and library
+HIDE SOLUTION
+Add the below in webpack.dev.js.
+
+
+output: {
+    libraryTarget: 'var',
+    library: 'Client'
+},
+Update your Javascript to use the Client package created by webpack
+HIDE SOLUTION
+Add the below in the client's index.js file.
+
+
+export {
+    checkForName,
+    handleSubmit
+}
+Then, in the views directory, in index.html, update the references to handleSubmit to Client.handleSubmit.
+
+Lastly, in the client/js directory, in formHandler.js, update to checkForName(formText).
+
+You do not need to change the server port for the classroom workspace.
+Make sure all functionality on the page works as expected. You should both be able to enter one of the captain names in client/js/nameChecker.js and get a new alert, as well as the Form Results on the app showing "this is a message".
+Need to try viewing the app? Use these to view or stop the app.
+
+OPEN APP CLOSE APP
